@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import {Nav, Navbar} from "react-bootstrap";
 import styled from "styled-components";
+import logo from "../assets/logo.png";
 
 const Styles = styled.div`
   .navbar {
@@ -18,7 +19,15 @@ const Styles = styled.div`
 export const NavigationBar = () => (
     <Styles>
         <Navbar expand="lg">
-            <Navbar.Brand href="/">RentCars</Navbar.Brand>
+            <Navbar.Brand href="/">
+                <img
+                    src={logo}
+                    width={30}
+                    height={30}
+                    className="d-inline-block align-top"
+                    alt={"Logo naszej firmy"}
+                /> RentCars
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
@@ -41,4 +50,4 @@ export const NavigationBar = () => (
             </Navbar.Collapse>
         </Navbar>
     </Styles >
-)
+);

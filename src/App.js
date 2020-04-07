@@ -4,8 +4,9 @@ import {Home} from "./Home";
 import {About} from "./About";
 import {Contact} from "./Contact";
 import {NoMatch} from "./NoMatch";
-import {Layout} from "./components/Layout";
+
 import {NavigationBar} from "./components/NavBar";
+import {Footer} from "./components/Footer";
 
 
 function App(){
@@ -13,17 +14,14 @@ function App(){
     <React.Fragment>
         <Router>
             <NavigationBar/>
-            <Layout>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/about" component={About}/>
                     <Route exact path="/contact" component={Contact}/>
                     <Route component={NoMatch}/>
                 </Switch>
-            </Layout>
+            <Footer/>
         </Router>
-
-
     </React.Fragment>
   );
 }
