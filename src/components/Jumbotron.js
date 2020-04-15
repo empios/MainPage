@@ -1,7 +1,8 @@
 import React from 'react';
-import {Jumbotron as Jumbo, Container, Button} from 'react-bootstrap';
+import {Jumbotron as Jumbo, Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import car from '../assets/car.jpg';
+import { MDBBtn } from "mdbreact";
 
 const Styles = styled.div`
   .header {
@@ -31,7 +32,7 @@ export const Jumbotron = () => (
             <Container>
                 <h1>Chciałbyś wypożyczyć samochód?</h1>
                 <p>Jesteś w idealnym do tego miejscu, mamy szeroki wachlarz usług i pojazdów z którego Ty jako klient możesz skorzystać!</p>
-                <Button type={"button"} variant={'danger'}>Przejdź do panelu Klienta!</Button>
+                <MDBBtn gradient="blue">Przejdź do panelu Klienta!</MDBBtn>
             </Container>
         </Jumbo>
     </Styles>
