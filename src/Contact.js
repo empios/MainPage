@@ -1,12 +1,16 @@
 import React from "react";
+import {ContactForm} from "./components/ContactForm";
+import {Footer} from "./components/Footer";
+
 
 
 export const Contact = () => {
 
     return(
-        <div>
-            <h2>Skontaktuj się z nami!</h2>
-        </div>
+        <React.Fragment>
+            <ContactForm/>
+            <Footer/>
+        </React.Fragment>
     )
 
 };

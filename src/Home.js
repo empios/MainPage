@@ -4,6 +4,7 @@ import {Slider} from "./components/Slider";
 import {Services} from "./components/Services";
 import {AppJumbo} from "./components/AppJumbo";
 import {Testimonials} from "./components/Testimonials";
+import {FooterMain} from "./components/FooterMain";
 
 export const Home = () => {
 
@@ -14,6 +15,7 @@ export const Home = () => {
         <Services/>
         <AppJumbo/>
         <Testimonials/>
+        <FooterMain/>
     </React.Fragment>
     )
 };

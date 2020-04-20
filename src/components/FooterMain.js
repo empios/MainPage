@@ -6,9 +6,6 @@ import {MDBContainer, MDBIcon} from "mdbreact";
 const Styles = styled.div`
   .navbar {
     background-color: #1b262c;
-    position:absolute;
-    bottom:0;
-    width:100%;
     
   }
    .nav-item{
@@ -16,7 +13,7 @@ const Styles = styled.div`
   }
 `;
 
-export const Footer = () => (
+export const FooterMain = () => (
     <Styles>
         <Navbar sticky={"bottom"}>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>

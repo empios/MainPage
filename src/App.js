@@ -6,7 +6,6 @@ import {Contact} from "./Contact";
 import {NoMatch} from "./NoMatch";
 
 import {NavigationBar} from "./components/NavBar";
-import {Footer} from "./components/Footer";
 
 
 function App(){
@@ -20,7 +19,6 @@ function App(){
                     <Route exact path="/contact" component={Contact}/>
                     <Route component={NoMatch}/>
                 </Switch>
-            <Footer/>
         </Router>
     </React.Fragment>
   );
