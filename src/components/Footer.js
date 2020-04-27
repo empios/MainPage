@@ -6,7 +6,7 @@ import {MDBContainer, MDBIcon} from "mdbreact";
 const Styles = styled.div`
   .navbar {
     background-color: #1b262c;
-    position:absolute;
+    position:fixed;
     bottom:0;
     width:100%;
     

@@ -1,12 +1,19 @@
 import React from "react";
+import {Footer} from "./components/Footer";
+import {AboutHeader} from "./components/AboutHeader";
+import {Paragraph} from "./components/Paragraph";
+import {Team} from "./components/Team";
 
 
 export const About = () => {
 
     return(
-        <div>
-            <h2>Witajcie na stronie o nas!</h2>
-        </div>
+        <React.Fragment>
+            <AboutHeader/>
+            <Paragraph/>
+            <Team/>
+            <Footer/>
+        </React.Fragment>
     )
 
 };
