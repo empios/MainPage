@@ -5,6 +5,8 @@ import {Services} from "./components/Services";
 import {AppJumbo} from "./components/AppJumbo";
 import {Testimonials} from "./components/Testimonials";
 import {FooterMain} from "./components/FooterMain";
+import FetchCarInfo from "./components/FetchCarInfo";
+import FetchLocInfo from "./components/FetchLocInfo";
 
 export const Home = () => {
 
@@ -15,6 +17,8 @@ export const Home = () => {
         <Services/>
         <AppJumbo/>
         <Testimonials/>
+        <FetchCarInfo/>
+        <FetchLocInfo/>
         <FooterMain/>
     </React.Fragment>
     )
