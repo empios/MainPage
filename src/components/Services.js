@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Button, Card, Col, Container, Row} from "react-bootstrap";
 import man from "../assets/21194.jpg";
 import reservation from "../assets/reservation.jpg";
+import {Link} from "react-scroll";
 
 
 const Styles = styled.div`
@@ -24,7 +25,12 @@ export const Services = () => (
                             <Card.Text>
                                 Działamy na terenie całej Polski, posiadamy liczne salony oraz punkty.
                             </Card.Text>
-                            <Button variant={"danger"}>Sprawdź najbliższy punkt</Button>
+                            <Link activeClass="active"
+                                to="map"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                  duration={500}><Button>Sprawdź najbliższy punkt</Button></Link>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -36,7 +42,7 @@ export const Services = () => (
                             <Card.Text>
                                 Nie musisz wychodzić z domu aby zarezerwować wymarzone auto!
                             </Card.Text>
-                            <Button variant={"danger"}>Zarezerwuj teraz</Button>
+                            <Button href={"https://front-end-client-2bn7m8wzm.vercel.app/"}>Zarezerwuj teraz</Button>
                         </Card.Body>
                     </Card>
                 </Col>

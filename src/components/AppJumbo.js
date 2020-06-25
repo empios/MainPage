@@ -20,7 +20,7 @@ export const AppJumbo = () => (
                     <p className="mx-5 mb-5">Dostępna jest na urzędzenia iOS oraz Android. Wspiera wszystkie
                         funkcjolaności które dla państwa zaprojektowaliśmy aby mieć pod ręką najważniejsze funkcje
                         naszego systemu.</p>
-                    <MDBBtn outline color="white" className="mb-5"><MDBIcon icon="mobile" className="mr-2"></MDBIcon>Pobierz
+                    <MDBBtn href={"https://github.com/DiaIzd/Mobile_Application"} outline color="white" className="mb-5"><MDBIcon icon="mobile" className="mr-2"></MDBIcon>Pobierz
                         tutaj</MDBBtn>
                 </MDBCol>
             </MDBCol>

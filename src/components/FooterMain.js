@@ -1,5 +1,5 @@
 import React from "react";
-import {Nav, Navbar, NavItem} from "react-bootstrap";
+import {Button, Nav, Navbar, NavItem} from "react-bootstrap";
 import styled from "styled-components";
 import {MDBContainer, MDBIcon} from "mdbreact";
 
@@ -10,6 +10,7 @@ const Styles = styled.div`
   }
    .nav-item{
     color: white;
+    align-self: center;
   }
 `;
 
@@ -21,7 +22,7 @@ export const FooterMain = () => (
                 <Nav className="mx-auto">
                     <NavItem><h6>Copyright: &copy;2020 RentCars</h6></NavItem>
                     <NavItem>
-                        <MDBContainer>
+                        <MDBContainer fluid={true} className={"center"}>
                             <a className="fb-ic mr-3">
                                 <MDBIcon fab icon="facebook-f"/>
                             </a>
@@ -33,6 +34,7 @@ export const FooterMain = () => (
                             </a>
                         </MDBContainer>
                     </NavItem>
+                    <NavItem><Button size={"sm"} href={"https://front-end-workers-jz7w7b4ll.vercel.app/"}>Panel pracownika</Button></NavItem>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

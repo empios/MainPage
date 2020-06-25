@@ -1,39 +1,27 @@
 import React from 'react';
-import {Jumbotron as Jumbo, Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import car from '../assets/car.jpg';
-import { MDBBtn } from "mdbreact";
+import {MDBBtn, MDBContainer, MDBJumbotron} from "mdbreact";
 
 const Styles = styled.div`
   .header {
-    background: url(${car}) no-repeat center;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${car}) no-repeat center;
     background-size: cover;
-    color: #efefef;
+    color: white;
     height: 300px;
-    position: relative;
     z-index: -1;
-  }
-  .overlay {
-    background-color: #000;
-    opacity: 0.4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+    backdrop-filter: brightness(200%);
   }
 `;
 
 export const Jumbotron = () => (
     <Styles>
-        <Jumbo fluid className="header">
-            <div className="overlay"></div>
-            <Container>
+        <MDBJumbotron fluid className="header">
+            <MDBContainer>
                 <h1>Chciałbyś wypożyczyć samochód?</h1>
                 <p>Jesteś w idealnym do tego miejscu, mamy szeroki wachlarz usług i pojazdów z którego Ty jako klient możesz skorzystać!</p>
-                <MDBBtn gradient="blue">Przejdź do panelu Klienta!</MDBBtn>
-            </Container>
-        </Jumbo>
+                <MDBBtn href="https://front-end-client-2bn7m8wzm.vercel.app/" gradient="blue">Przejdź do panelu Klienta!</MDBBtn>
+            </MDBContainer>
+        </MDBJumbotron>
     </Styles>
 )

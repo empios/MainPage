@@ -35,7 +35,7 @@ export default class FetchLocInfo extends React.Component {
         return (
             <Container style={{height: 500, width: 1500}}>
             <ReactBingmaps
-                bingmapKey = ""
+                bingmapKey = "Amnvif0APzxRFXVwKF9NRFByDfr9nzSFkIuF4cUXZQRzXyytEVCSeMJ3SsKVveBP"
                 infoboxes = {tempArray}
             />
             </Container>
@@ -46,7 +46,7 @@ export default class FetchLocInfo extends React.Component {
     }
 
     render() {
-        return <div style={{marginBottom: 30, marginTop: 30}}>
+        return <div id="map" style={{marginBottom: 30, marginTop: 30}}>
             <div class="text-center"><h1>Obecne placówki</h1></div>
             <br/>
             {this.state.loading || !this.state.locations ? (<div class="text-center"><h2>Prosimy poczekać ładuje informacje...</h2></div>) :
