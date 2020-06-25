@@ -1,9 +1,19 @@
 import React from 'react';
 import {MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBContainer, MDBIcon, MDBInput, MDBRow} from "mdbreact";
+import emailjs from 'emailjs-com';
 
+function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'template_b02UVTxJ', e.target, 'user_npcwHsyzDRHWahOeGWqgW')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+}
 
 export const ContactForm = () => (
-
 
     <MDBContainer>
         <section className="my-5">
@@ -11,57 +21,65 @@ export const ContactForm = () => (
                 Skontaktuj się z nami
             </h2>
             <p className="text-center w-responsive mx-auto pb-5">
-                Chcesz się o coś zapytać? Może masz uwagi do naszej pracy lub chcesz wystawić nam opinię? Jeśli tak - zapraszamy do skorzystania z formy poniżej.
+                Chcesz się o coś zapytać? Może masz uwagi do naszej pracy lub chcesz wystawić nam opinię? Jeśli tak -
+                zapraszamy do skorzystania z formy poniżej.
             </p>
             <MDBRow>
                 <MDBCol lg="5" className="lg-0 mb-4">
                     <MDBCard>
                         <MDBCardBody>
-                                <h3 className="mt-2 blue-grey-text">
-                                    <MDBIcon icon="envelope"/> Napisz do nas:
-                                </h3>
+                            <h3 className="mt-2 blue-grey-text">
+                                <MDBIcon icon="envelope"/> Napisz do nas:
+                            </h3>
                             <p className="dark-grey-text">
                                 Odpowiedź zwrotna będzie dostarczona w mniej niż 24h!
                             </p>
-                            <div className="md-form">
-                                <MDBInput
-                                    icon="user"
-                                    label="Twoje imię"
-                                    iconClass="grey-text"
-                                    type="text"
-                                    id="form-name"
-                                />
-                            </div>
-                            <div className="md-form">
-                                <MDBInput
-                                    icon="envelope"
-                                    label="Twój e-mail"
-                                    iconClass="grey-text"
-                                    type="text"
-                                    id="form-email"
-                                />
-                            </div>
-                            <div className="md-form">
-                                <MDBInput
-                                    icon="tag"
-                                    label="Temat"
-                                    iconClass="grey-text"
-                                    type="text"
-                                    id="form-subject"
-                                />
-                            </div>
-                            <div className="md-form">
-                                <MDBInput
-                                    icon="pencil-alt"
-                                    label="Treść"
-                                    iconClass="grey-text"
-                                    type="textarea"
-                                    id="form-text"
-                                />
-                            </div>
-                            <div className="text-center">
-                                <MDBBtn color="light-blue">Wyślij</MDBBtn>
-                            </div>
+                            <form onSubmit={sendEmail}>
+                                <div className="md-form">
+                                    <input type="hidden" name="contact_number" />
+                                    <MDBInput
+                                        icon="user"
+                                        label="Twoje imię"
+                                        iconClass="grey-text"
+                                        type="text"
+                                        id="form-name"
+                                        name="name"
+                                    />
+                                </div>
+                                <div className="md-form">
+                                    <MDBInput
+                                        icon="envelope"
+                                        label="Twój e-mail"
+                                        iconClass="grey-text"
+                                        type="text"
+                                        id="form-email"
+                                        name="reply_to"
+                                    />
+                                </div>
+                                <div className="md-form">
+                                    <MDBInput
+                                        icon="tag"
+                                        label="Temat"
+                                        iconClass="grey-text"
+                                        type="text"
+                                        id="form-subject"
+                                        name="subject"
+                                    />
+                                </div>
+                                <div className="md-form">
+                                    <MDBInput
+                                        icon="pencil-alt"
+                                        label="Treść"
+                                        iconClass="grey-text"
+                                        type="textarea"
+                                        id="form-text"
+                                        name="wiadomosc"
+                                    />
+                                </div>
+                                <div className="text-center">
+                                    <MDBBtn type={"submit"} color="light-blue">Wyślij</MDBBtn>
+                                </div>
+                            </form>
                         </MDBCardBody>
                     </MDBCard>
                 </MDBCol>

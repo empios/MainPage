@@ -24,7 +24,7 @@ export default class FetchCarInfo extends React.Component{
         const response = await fetch(url);
         const data = await response.json();
         const parseData = JSON.parse(JSON.stringify(data))
-        alert(JSON.stringify("Typ: "+parseData.body + "  Paliwo: " + parseData.fuelType+ "  Poj.Silnika: " + parseData.engineCapacity+ "  Konie mechniczne: " + parseData.enginePower+
+        alert(JSON.stringify("Typ: "+parseData.bodyKit + "  Paliwo: " + parseData.fuelType+ "  Poj.Silnika: " + parseData.engineCapacity+ "  Konie mechniczne: " + parseData.enginePower+
             " Rok produkcji: " + parseData.prodYear+ "  Kraj produkcji: " + parseData.countryProd+ "  Kolor: " + parseData.colour+ "  Vin: " + parseData.vin+ "  Zużycie: " + parseData.fuelUsage+
             "  Skrzynia biegów: " + parseData.gearBoxType+ "  Ilość biegów: " + parseData.gearBoxLevel))
     }
